@@ -1,220 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Amit Enterprise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit Enterprise</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f5f5f5;
-    }
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+}
 
-    header {
-      background: black;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
+header {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #222;
-      flex-wrap: wrap;
-    }
+.tab {
+  display: flex;
+}
 
-    nav a {
-      color: white;
-      padding: 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.tab button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      background: #444;
-    }
+.tabcontent {
+  display: none;
+  padding: 10px;
+}
 
-    .container {
-      padding: 15px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.product {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
 
-    .search-box {
-      text-align: center;
-      margin: 10px 0;
-    }
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .search-box input {
-      padding: 10px;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+.btn {
+  display: block;
+  text-align: center;
+  background: green;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+}
 
-    .hero {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 10px;
-      border-radius: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: green;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    h2 {
-      margin-top: 25px;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      width: 220px;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 5px #ccc;
-      position: relative;
-    }
-
-    .badge {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      background: red;
-      color: white;
-      padding: 3px 6px;
-      font-size: 10px;
-      border-radius: 3px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
+.category {
+  background: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Amit Enterprise</h1>
-  <p>Retail & Wholesale Supplier</p>
-</header>
+<header>Amit Enterprise</header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#jewellery">Jewellery</a>
-  <a href="#other">Other Products</a>
-  <a href="#wholesale">Wholesale</a>
-  <a href="#contact">Contact</a>
-</nav>
+<div class="tab">
+  <button onclick="openTab('imitation')">💎 Imitation</button>
+  <button onclick="openTab('other')">🛍️ Other Products</button>
+</div>
 
-<div class="container">
+<!-- IMITATION -->
+<div id="imitation" class="tabcontent" style="display:block;">
 
-  <!-- SEARCH -->
-  <div class="search-box">
-    <input type="text" placeholder="Search products... (demo only)">
-  </div>
+<div class="category">Necklace Sets</div>
 
-  <!-- HOME -->
-  <section id="home" class="hero">
-    <h2>Welcome to Amit Enterprise</h2>
-    <p>Imitation Jewellery & Multi-Category Products</p>
-    <a class="btn" href="https://wa.me/919725228084">📱 WhatsApp Order</a>
-  </section>
+<div class="product">
+  <img src="https://via.placeholder.com/300">
+  <h3>Necklace Set</h3>
+  <p>Price: ₹299</p>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Necklace Set">Order on WhatsApp</a>
+</div>
 
-  <!-- JEWELLERY -->
-  <section id="jewellery">
-    <h2>💎 Jewellery Collection</h2>
+<div class="category">Earrings</div>
 
-    <div class="grid">
+<div class="product">
+  <img src="https://via.placeholder.com/300">
+  <h3>Earrings</h3>
+  <p>Price: ₹149</p>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Earrings">Order on WhatsApp</a>
+</div>
 
-      <div class="card">
-        <div class="badge">NEW</div>
-        <img src="https://via.placeholder.com/200">
-        <h3>Earrings</h3>
-        <p>₹99</p>
-        <a class="btn" href="https://wa.me/919725228084">Buy Now</a>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/200">
-        <h3>Necklace Set</h3>
-        <p>₹199</p>
-        <a class="btn" href="https://wa.me/919725228084">Buy Now</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- OTHER -->
-  <section id="other">
-    <h2>🛍️ Other Products</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="badge">HOT</div>
-        <img src="https://via.placeholder.com/200">
-        <h3>Kitchen Tool</h3>
-        <p>₹120</p>
-        <a class="btn" href="https://wa.me/919725228084">Buy Now</a>
-      </div>
-
-      <div class="card">
-        <img src="https://via.placeholder.com/200">
-        <h3>Rain Item</h3>
-        <p>₹99</p>
-        <a class="btn" href="https://wa.me/919725228084">Buy Now</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- WHOLESALE -->
-  <section id="wholesale" class="hero">
-    <h2>📦 Wholesale Inquiry</h2>
-    <p>Bulk buyers contact us on WhatsApp</p>
-    <a class="btn" href="https://wa.me/919725228084?text=I%20want%20wholesale%20price">Get Wholesale Price</a>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="hero">
-    <h2>📞 Contact Us</h2>
-    <p>WhatsApp: 9725228084</p>
-  </section>
+<!-- Bulk -->
+<div class="product">
+  <h3>🔥 Wholesale / Bulk Order</h3>
+  <a class="btn" style="background: darkred;"
+  href="https://wa.me/91XXXXXXXXXX?text=I want wholesale price for imitation jewellery">
+  Bulk Inquiry
+  </a>
+</div>
 
 </div>
 
-<footer>
-  <p>© 2026 Amit Enterprise</p>
-</footer>
+<!-- OTHER PRODUCTS -->
+<div id="other" class="tabcontent">
+
+<div class="product">
+  <img src="https://via.placeholder.com/300">
+  <h3>Kitchen Tool</h3>
+  <p>Price: ₹199</p>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Kitchen Tool">Order on WhatsApp</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300">
+  <h3>Rain Item</h3>
+  <p>Price: ₹99</p>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Rain Item">Order on WhatsApp</a>
+</div>
+
+<!-- Bulk -->
+<div class="product">
+  <h3>🔥 Wholesale Inquiry</h3>
+  <a class="btn" style="background: darkred;"
+  href="https://wa.me/91XXXXXXXXXX?text=I want bulk order for other products">
+  Bulk Order WhatsApp
+  </a>
+</div>
+
+</div>
+
+<script>
+function openTab(tabName) {
+  document.getElementById('imitation').style.display = 'none';
+  document.getElementById('other').style.display = 'none';
+  document.getElementById(tabName).style.display = 'block';
+}
+</script>
 
 </body>
 </html>
