@@ -1,0 +1,3 @@
+<video controls style="width:100%; border-radius:10px;">
+  <source src="reel.mp4" type="video/mp4">
+</video>
