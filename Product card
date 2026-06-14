@@ -1,0 +1,18 @@
+<div class="product">
+
+  <img src="product.jpg" alt="Product Image">
+
+  <!-- Reel / Video -->
+  <video controls style="width:100%; margin-top:10px; border-radius:10px;">
+    <source src="reel.mp4" type="video/mp4">
+  </video>
+
+  <h3>Product Name</h3>
+  <p>Price: ₹299</p>
+
+  <a class="btn"
+  href="https://wa.me/91XXXXXXXXXX?text=I want this product">
+  Order on WhatsApp
+  </a>
+
+</div>
