@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amit Enterprise</title>
 
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f5f5f5;
 }
 
-header {
-  background: black;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 20px;
+header{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:15px;
+  font-size:18px;
 }
 
-.tab {
-  display: flex;
+.tab{
+  display:flex;
 }
 
-.tab button {
-  flex: 1;
-  padding: 15px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+.tab button{
+  flex:1;
+  padding:12px;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+  background:#ddd;
 }
 
-.tabcontent {
-  display: none;
-  padding: 10px;
+.tabcontent{
+  display:none;
+  padding:10px;
 }
 
-.product {
-  background: white;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 10px;
+.container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
 }
 
-.product img {
- .product{
-  max-width:300px;
-  margin:auto;
-}
-  border-radius: 10px;
-}
-
-.btn {
-  display: block;
-  text-align: center;
-  background: green;
-  color: white;
-  padding: 10px;
-  margin-top: 10px;
-  text-decoration: none;
-  border-radius: 8px;
+.product{
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.category {
-  background: #ddd;
-  padding: 10px;
-  margin-top: 10px;
-  font-weight: bold;
+.product img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.btn{
+  display:block;
+  text-align:center;
+  background:green;
+  color:white;
+  padding:8px;
+  margin-top:8px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
 }
 </style>
 </head>
@@ -84,68 +84,54 @@ header {
 <!-- IMITATION -->
 <div id="imitation" class="tabcontent" style="display:block;">
 
-<div class="category">Necklace Sets</div>
+<div class="container">
 
-<div class="product">
-  <img src="https://i.ibb.co/zHfpNHXD/Whats-App-Image-2026-03-01-at-4-16-44-PM.jpg">
-  <h3>Necklace Set</h3>
-  <p>Price: ₹199</p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Necklace Set">Order on WhatsApp</a>
-</div>
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Necklace Set</h3>
+    <p>₹299</p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Necklace Set">Order</a>
+  </div>
 
-<div class="category">Earrings</div>
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Earrings</h3>
+    <p>₹149</p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Earrings">Order</a>
+  </div>
 
-<div class="product">
-  <img src="https://via.placeholder.com/300">
-  <h3>Earrings</h3>
-  <p>Price: ₹149</p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Earrings">Order on WhatsApp</a>
-</div>
-
-<!-- Bulk -->
-<div class="product">
-  <h3>🔥 Wholesale / Bulk Order</h3>
-  <a class="btn" style="background: darkred;"
-  href="https://wa.me/91XXXXXXXXXX?text=I want wholesale price for imitation jewellery">
-  Bulk Inquiry
-  </a>
 </div>
 
 </div>
 
-<!-- OTHER PRODUCTS -->
+<!-- OTHER -->
 <div id="other" class="tabcontent">
 
-<div class="product">
-  <img src="https://via.placeholder.com/300">
-  <h3>Kitchen Tool</h3>
-  <p>Price: ₹199</p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Kitchen Tool">Order on WhatsApp</a>
-</div>
+<div class="container">
 
-<div class="product">
-  <img src="https://via.placeholder.com/300">
-  <h3>Rain Item</h3>
-  <p>Price: ₹99</p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Rain Item">Order on WhatsApp</a>
-</div>
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Kitchen Tool</h3>
+    <p>₹199</p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Kitchen Tool">Order</a>
+  </div>
 
-<!-- Bulk -->
-<div class="product">
-  <h3>🔥 Wholesale Inquiry</h3>
-  <a class="btn" style="background: darkred;"
-  href="https://wa.me/91XXXXXXXXXX?text=I want bulk order for other products">
-  Bulk Order WhatsApp
-  </a>
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Rain Item</h3>
+    <p>₹99</p>
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Rain Item">Order</a>
+  </div>
+
 </div>
 
 </div>
 
 <script>
-function openTab(tabName) {
-  document.getElementById('imitation').style.display = 'none';
-  document.getElementById('other').style.display = 'none';
-  document.getElementById(tabName).style.display = 'block';
+function openTab(tab){
+  document.getElementById('imitation').style.display='none';
+  document.getElementById('other').style.display='none';
+  document.getElementById(tab).style.display='block';
 }
 </script>
 
